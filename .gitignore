@@ -1,0 +1,5 @@
+*.vdi
+*.iso
+*.box
+builds/
+iso/
