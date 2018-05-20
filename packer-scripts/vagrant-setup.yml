@@ -1,0 +1,25 @@
+---
+- hosts: all
+  vars:
+    http_port: 80
+    max_clients: 200
+  remote_user: root
+  tasks:
+  - name: Ensure vagrant user exists
+    user:
+      name: vagrant
+      state: present
+      comment: Vagrant User - WARNING - HAS PASSWORDLESS SUDO BY DEFAULT
+    become: "yes"
+  - name: Add passwordless sudo to the vagrant user
+    lineinfile:
+      path: /etc/sudoers
+      line: "vagrant ALL=(ALL) NOPASSWD: ALL"
+      validate: '/usr/sbin/visudo -cf %s'
+    become: "yes"
+  - name: Add Vagrant insecure SSH key
+    authorized_key:
+      key: https://raw.githubusercontent.com/hashicorp/vagrant/master/keys/vagrant.pub
+      state: present
+      user: vagrant
+    become: "yes"
