@@ -152,5 +152,11 @@
         "numvcpus": "1"
       }
     }
+  ],
+  "post-processors": [
+    {
+      "output": "builds/{{.Provider}}-kali.box",
+      "type": "vagrant"
+    }
   ]
 }
