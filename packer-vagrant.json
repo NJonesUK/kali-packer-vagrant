@@ -71,11 +71,11 @@
       "headless": false,
       "http_directory": "http",
       "iso_urls": [
-        "iso/kali-linux-2018.2-amd64.iso",
-        "http://cdimage.kali.org/kali-2018.2/kali-linux-2018.2-amd64.iso"
+        "iso/kali-linux-2019.3-amd64.iso",
+        "https://cdimage.kali.org/kali-2019.3/kali-linux-2019.3-amd64.iso"
       ],
       "iso_checksum_type": "sha256",
-      "iso_checksum": "56f677e2edfb2efcd0b08662ddde824e254c3d53567ebbbcdbbf5c03efd9bc0f",
+      "iso_checksum": "d9bc23ad1ed2af7f0170dc6d15aec58be2f1a0a5be6751ce067654b753ef7020",
       "ssh_username": "root",
       "ssh_password": "toor",
       "ssh_port": 22,
@@ -133,11 +133,11 @@
       "headless": true,
       "http_directory": "http",
       "iso_urls": [
-        "iso/kali-linux-2018.2-amd64.iso",
-        "http://cdimage.kali.org/kali-2018.2/kali-linux-2018.2-amd64.iso"
+        "iso/kali-linux-2019.3-amd64.iso",
+        "https://cdimage.kali.org/kali-2019.3/kali-linux-2019.3-amd64.iso"
       ],
       "iso_checksum_type": "sha256",
-      "iso_checksum": "56f677e2edfb2efcd0b08662ddde824e254c3d53567ebbbcdbbf5c03efd9bc0f",
+      "iso_checksum": "d9bc23ad1ed2af7f0170dc6d15aec58be2f1a0a5be6751ce067654b753ef7020",
       "output_directory": "output-vmware-iso",
       "ssh_username": "root",
       "ssh_password": "toor",
