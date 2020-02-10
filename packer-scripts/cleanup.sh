@@ -12,3 +12,6 @@ rm -f /EMPTY
 
 # Add `sync` so Packer doesn't quit too early, before the large file is deleted.
 sync
+
+# Disable root account over SSH
+sed -i '/PermitRootLogin yes/d' /etc/ssh/sshd_config

@@ -3,3 +3,6 @@
 *.box
 builds/
 iso/
+output*/
+packer_cache/
+.vagrant/
