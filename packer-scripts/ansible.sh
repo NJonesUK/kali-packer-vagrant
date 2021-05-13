@@ -2,7 +2,7 @@
 
 # Install Ansible repository.
 apt-get -y update
-apt-get -y install python3-pip
+apt-get -y install python3-pip python3-apt
 
 # Install Ansible.
-pip install --upgrade ansible
+pip3 install --upgrade ansible

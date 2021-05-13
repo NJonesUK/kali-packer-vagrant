@@ -1,0 +1,30 @@
+---
+- hosts: all
+  roles:
+    - role: dev-base
+      ignore_errors: yes
+    - role: docker
+    - role: vscode
+    - role: molecule
+    - role: packer
+    - role: awscli
+    - role: google-cloud-sdk
+    - role: aws_inventory
+    - role: aws_public_ips
+    - role: aws_pwn
+    - role: aws_recon
+    - role: cfn-nag
+    - role: checkov
+    - role: cloudfail
+    - role: cloudjack
+    - role: cloudmapper
+    - role: cloudquery
+    - role: cloudsplaining
+    - role: gcp-iam-collector
+    - role: pacu
+    - role: parliament
+    - role: pmapper
+    - role: prowler
+    - role: sandcastle
+    - role: scoutsuite
+    - role: terrascan

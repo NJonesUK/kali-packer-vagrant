@@ -1,0 +1,6 @@
+[submodule "ansible-collection-security"]
+	path = ansible-collection-security
+	url = git@github.com:NJonesUK/ansible-collection-security.git
+[submodule "ansible-collection-dev"]
+	path = ansible-collection-dev
+	url = git@github.com:NJonesUK/ansible-collection-dev.git

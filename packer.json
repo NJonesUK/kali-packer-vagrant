@@ -33,10 +33,10 @@
       "guest_os_type": "Debian_64",
       "headless": true,
       "http_directory": "http",
-      "iso_checksum": "sha256:50492d761e400c2b5e22c8f253dd6f75c27e4bc84e33c2eff272476a0588fb02",
+      "iso_checksum": "sha256:265812bc13ab11d40c610424871bdf9198b9e7cad99b06540d96fac67dd704de",
       "iso_urls": [
-        "iso/kali-linux-2020.4-installer-amd64.iso",
-        "https://cdimage.kali.org/kali-2020.4/kali-linux-2020.4-installer-amd64.iso"
+        "iso/kali-linux-2021.1-installer-amd64.iso",
+        "https://cdimage.kali.org/kali-2021.1/kali-linux-2021.1-installer-amd64.iso"
       ],
       "shutdown_command": "echo 'kali'|sudo -S shutdown -P now",
       "ssh_password": "kali",
@@ -93,10 +93,10 @@
       "guest_os_type": "debian8-64",
       "headless": true,
       "http_directory": "http",
-      "iso_checksum": "sha256:50492d761e400c2b5e22c8f253dd6f75c27e4bc84e33c2eff272476a0588fb02",
+      "iso_checksum": "sha256:265812bc13ab11d40c610424871bdf9198b9e7cad99b06540d96fac67dd704de",
       "iso_urls": [
-        "iso/kali-linux-2020.4-installer-amd64.iso",
-        "https://cdimage.kali.org/kali-2020.4/kali-linux-2020.4-installer-amd64.iso"
+        "iso/kali-linux-2021.1-installer-amd64.iso",
+        "https://cdimage.kali.org/kali-2021.1/kali-linux-2021.1-installer-amd64.iso"
       ],
       "output_directory": "output-vmware-iso",
       "shutdown_command": "echo 'kali'|sudo -S shutdown -P now",
@@ -142,14 +142,24 @@
       "type": "shell"
     },
     {
+      "type": "ansible-local",
+      "command": "PYTHONUNBUFFERED=1 ANSIBLE_PYTHON_INTERPRETER=/usr/bin/python3 ANSIBLE_ROLES_PATH=\"/tmp/ansible-roles/roles:/home/kali/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:/tmp/ansible-roles:/tmp/ansible-roles/roles/roles\" ansible-playbook", 
+      "playbook_file": "./playbook.yml",
+      "role_paths": [
+        "./ansible-collection-dev/roles/",
+        "./ansible-collection-security/roles/"
+      ],
+      "staging_directory": "/tmp/ansible-roles/"
+    },
+    {
       "execute_command": "echo 'kali' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
       "script": "packer-scripts/cleanup.sh",
       "type": "shell"
     }
   ],
   "variables": {
-    "password": "",
-    "username": ""
+    "password": "kali",
+    "username": "kali"
   }
 }
 
