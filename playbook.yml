@@ -20,7 +20,7 @@
     - role: cloudjack
     # - role: cloudmapper
     - role: cloudquery
-    - role: cloudsec-docs
+    - role: cloudsec_docs
     - role: cloudsplaining
     - role: gcp-iam-collector
     - role: pacu
