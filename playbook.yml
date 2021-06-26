@@ -8,6 +8,7 @@
     - role: molecule
     - role: packer
     - role: awscli
+    - role: aws-vault
     - role: google-cloud-sdk
     - role: aws_inventory
     - role: aws_public_ips
@@ -17,14 +18,17 @@
     - role: checkov
     - role: cloudfail
     - role: cloudjack
-    - role: cloudmapper
+    # - role: cloudmapper
     - role: cloudquery
+    - role: cloudsec-docs
     - role: cloudsplaining
     - role: gcp-iam-collector
     - role: pacu
     - role: parliament
     - role: pmapper
     - role: prowler
+    - role: rpcheckup
     - role: sandcastle
     - role: scoutsuite
     - role: terrascan
+    - role: trufflehog
