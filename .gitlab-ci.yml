@@ -17,4 +17,5 @@ build-job:       # This job runs in the build stage, which runs first.
   tags: [shell]
   script:
     - sudo packer build -force packer.json
-
+after_script:
+  - sudo chown -R gitlab-runner:gitlab-runner .
